@@ -1,0 +1,91 @@
+# Project: Assignment2
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = main.o GameObject.o Player.o Enemy.o BreakableObject.o Images.o SoundEffects.o Music.o Bullet.o Weapon.o BaseInterface.o GameScreen.o Button.o StartScreen.o HelpScreen.o GameLogic.o CollisionDetection.o EnemyController.o EWeapon.o GameOverScreen.o SpecialBullet.o EBullet.o
+LINKOBJ  = main.o GameObject.o Player.o Enemy.o BreakableObject.o Images.o SoundEffects.o Music.o Bullet.o Weapon.o BaseInterface.o GameScreen.o Button.o StartScreen.o HelpScreen.o GameLogic.o CollisionDetection.o EnemyController.o EWeapon.o GameOverScreen.o SpecialBullet.o EBullet.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -mwindows -lallegro-4.4.2-md -m32 -pg
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = Assignment2.exe
+CXXFLAGS = $(CXXINCS) -m32 -pg
+CFLAGS   = $(INCS) -m32 -pg
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+GameObject.o: GameObject.cpp
+	$(CPP) -c GameObject.cpp -o GameObject.o $(CXXFLAGS)
+
+Player.o: Player.cpp
+	$(CPP) -c Player.cpp -o Player.o $(CXXFLAGS)
+
+Enemy.o: Enemy.cpp
+	$(CPP) -c Enemy.cpp -o Enemy.o $(CXXFLAGS)
+
+BreakableObject.o: BreakableObject.cpp
+	$(CPP) -c BreakableObject.cpp -o BreakableObject.o $(CXXFLAGS)
+
+Images.o: Images.cpp
+	$(CPP) -c Images.cpp -o Images.o $(CXXFLAGS)
+
+SoundEffects.o: SoundEffects.cpp
+	$(CPP) -c SoundEffects.cpp -o SoundEffects.o $(CXXFLAGS)
+
+Music.o: Music.cpp
+	$(CPP) -c Music.cpp -o Music.o $(CXXFLAGS)
+
+Bullet.o: Bullet.cpp
+	$(CPP) -c Bullet.cpp -o Bullet.o $(CXXFLAGS)
+
+Weapon.o: Weapon.cpp
+	$(CPP) -c Weapon.cpp -o Weapon.o $(CXXFLAGS)
+
+BaseInterface.o: BaseInterface.cpp
+	$(CPP) -c BaseInterface.cpp -o BaseInterface.o $(CXXFLAGS)
+
+GameScreen.o: GameScreen.cpp
+	$(CPP) -c GameScreen.cpp -o GameScreen.o $(CXXFLAGS)
+
+Button.o: Button.cpp
+	$(CPP) -c Button.cpp -o Button.o $(CXXFLAGS)
+
+StartScreen.o: StartScreen.cpp
+	$(CPP) -c StartScreen.cpp -o StartScreen.o $(CXXFLAGS)
+
+HelpScreen.o: HelpScreen.cpp
+	$(CPP) -c HelpScreen.cpp -o HelpScreen.o $(CXXFLAGS)
+
+GameLogic.o: GameLogic.cpp
+	$(CPP) -c GameLogic.cpp -o GameLogic.o $(CXXFLAGS)
+
+CollisionDetection.o: CollisionDetection.cpp
+	$(CPP) -c CollisionDetection.cpp -o CollisionDetection.o $(CXXFLAGS)
+
+EnemyController.o: EnemyController.cpp
+	$(CPP) -c EnemyController.cpp -o EnemyController.o $(CXXFLAGS)
+
+EWeapon.o: EWeapon.cpp
+	$(CPP) -c EWeapon.cpp -o EWeapon.o $(CXXFLAGS)
+
+GameOverScreen.o: GameOverScreen.cpp
+	$(CPP) -c GameOverScreen.cpp -o GameOverScreen.o $(CXXFLAGS)
+
+SpecialBullet.o: SpecialBullet.cpp
+	$(CPP) -c SpecialBullet.cpp -o SpecialBullet.o $(CXXFLAGS)
+
+EBullet.o: EBullet.cpp
+	$(CPP) -c EBullet.cpp -o EBullet.o $(CXXFLAGS)
